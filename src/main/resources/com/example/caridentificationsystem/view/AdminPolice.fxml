@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #f4f7f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.AdminPolice">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="8.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+                <Line endX="117.0" layoutX="108.0" layoutY="121.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="13.0" layoutY="146.0" text="Main" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+                <Button layoutX="6.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="        Dashboard" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="-4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/6.png" /></image></ImageView>
+                <Label layoutX="77.0" layoutY="33.0" text="VIS Admin" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+                <Label layoutX="78.0" layoutY="59.0" text="Vehicle ID System" textFill="WHITE"><font><Font size="17.0" /></font></Label>
+                <Button layoutX="6.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleVehicles" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="    Vehicles" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <Button layoutX="8.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleUsers" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Users" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/9.png" /></image></ImageView>
+                <ImageView fitHeight="34.0" fitWidth="55.0" layoutX="11.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/8.png" /></image></ImageView>
+                <ImageView fitHeight="47.0" fitWidth="104.0" layoutX="5.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/7.png" /></image></ImageView>
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+                <Button layoutX="3.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleWorkshop" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="       Workshop" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A1.png" /></image></ImageView>
+                <Label layoutX="13.0" layoutY="345.0" text="Modules" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+                <Button layoutX="1.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleInsurance" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Insurance" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="12.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A2.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="479.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878; -fx-border-color: white; -fx-border-radius: 5;" text="Police" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="16.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A3.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Customer" textFill="WHITE"><font><Font name="System Bold" size="16.0" /></font></Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/B.png" /></image></ImageView>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <VBox layoutX="255.0" layoutY="14.0" prefHeight="690.0" prefWidth="1090.0" spacing="15.0">
+            <children>
+                <!-- STAT CARDS -->
+                <HBox prefHeight="90.0" prefWidth="1090.0" spacing="15.0">
+                    <children>
+                        <Pane prefHeight="90.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+                            <children>
+                                <Label layoutX="15.0" layoutY="15.0" text="Total Reports" textFill="#777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblTotalReports" layoutX="15.0" layoutY="35.0" text="0" textFill="#333"><font><Font name="System Bold" size="28.0" /></font></Label>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="90.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+                            <children>
+                                <Label layoutX="15.0" layoutY="15.0" text="Active Cases" textFill="#777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblActiveCases" layoutX="15.0" layoutY="35.0" text="0" textFill="#eb5757"><font><Font name="System Bold" size="28.0" /></font></Label>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="90.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+                            <children>
+                                <Label layoutX="15.0" layoutY="15.0" text="Flagged Vehicles" textFill="#777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblFlaggedTotal" layoutX="15.0" layoutY="35.0" text="0" textFill="#f2994a"><font><Font name="System Bold" size="28.0" /></font></Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+
+                <!-- TABBED VIEW -->
+                <TabPane prefHeight="330.0" prefWidth="1090.0" style="-fx-background-color: white; -fx-background-radius: 12;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Police Reports">
+                            <content>
+                                <VBox spacing="10.0" style="-fx-padding: 10;">
+                                    <children>
+                                        <TableView fx:id="reportTable" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="colReg" prefWidth="90" text="Reg No" />
+                                                <TableColumn fx:id="colOwner" prefWidth="120" text="Owner" />
+                                                <TableColumn fx:id="colType" prefWidth="100" text="Type" />
+                                                <TableColumn fx:id="colDate" prefWidth="90" text="Date" />
+                                                <TableColumn fx:id="colOfficer1" prefWidth="120" text="Officer" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Flagged Vehicles">
+                            <content>
+                                <HBox spacing="15.0" style="-fx-padding: 15;">
+                                    <children>
+                                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                                                    <children>
+                                                        <ProgressIndicator fx:id="indInvestigation" prefHeight="25.0" prefWidth="25.0" />
+                                                    </children>
+                                                </HBox>
+                                                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                                                    <content>
+                                                        <TableView fx:id="tblFlagged" prefHeight="253.0" prefWidth="1045.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="colFlagReg" prefWidth="100" text="Reg Number" />
+                                                                <TableColumn fx:id="colMake" prefWidth="130" text="Make" />
+                                                                <TableColumn fx:id="colModel" prefWidth="140" text="Model" />
+                                                                <TableColumn fx:id="colYear" prefWidth="90" text="Year" />
+                                                                <TableColumn fx:id="colColour" prefWidth="90" text="Colour" />
+                                                                <TableColumn fx:id="colOwnerNames" prefWidth="110" text="Owner Names" />
+                                                                <TableColumn fx:id="colFlagType" prefWidth="155.0" text="Flag Type" />
+                                                                <TableColumn fx:id="colVehicleStatus" prefWidth="121.0" text="Vehicle Status" />
+                                                                <TableColumn fx:id="colOfficer" prefWidth="108.0" text="Officer" />
+                                                            </columns>
+                                                        </TableView>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+
+                <!-- BOTTOM ROW -->
+                <HBox prefHeight="170.0" prefWidth="1090.0" spacing="15.0">
+                    <children>
+                        <VBox prefWidth="1090.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 15;">
+                            <children>
+                                <Label text="Flagged Vehicles (Active Alerts Summary)"><font><Font name="System Bold" size="15.0" /></font></Label>
+                                <ListView fx:id="flaggedList" prefHeight="120.0" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent; -fx-border-color: #eee; -fx-border-radius: 5;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

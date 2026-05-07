@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #cce7c9;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.UserCustomer">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="14.0" layoutY="15.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+            <Circle fill="#fbfeff" layoutX="111.0" layoutY="94.0" radius="84.0" stroke="BLACK" strokeType="INSIDE" />
+
+                <ImageView fitHeight="182.0" fitWidth="168.0" layoutX="37.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../../../../img/CC1.png" /></image>
+                </ImageView>
+                <Label layoutX="11.0" layoutY="191.0" text="WELCOME CUSTOMER" textFill="WHITE">
+                    <font><Font name="System Bold" size="19.0" /></font>
+                </Label>
+
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+            <Line endX="123.0" layoutX="104.0" layoutY="232.0" startX="-100.0" />
+            </children>
+        </Pane>
+
+        <!-- HEADER PANE -->
+        <Pane layoutX="259.0" layoutY="15.0" opacity="0.75" prefHeight="58.0" prefWidth="1105.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+            <children>
+                <Label layoutX="14.0" layoutY="6.0" text="Customer Vehicle Enquiry" textFill="WHITE">
+                    <font><Font name="Arial Bold" size="35.0" /></font>
+                </Label>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <Pane layoutX="259.0" layoutY="82.0" prefHeight="623.0" prefWidth="1105.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <!-- Form Section -->
+                <Label layoutX="25.0" layoutY="20.0" text="Customer Vehicle Enquiry" textFill="#50c878">
+                    <font><Font name="System Bold" size="18.0" /></font>
+                </Label>
+
+                <!-- Row 1 -->
+                <TextField fx:id="txtOwnerName" layoutX="25.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Owner Full Name" />
+                <TextField fx:id="txtOwnerContact" layoutX="240.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Contact Number" />
+                <TextField fx:id="txtOwnerEmail" layoutX="455.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Email Address" />
+                <TextField fx:id="txtRegNo" layoutX="670.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Vehicle Registration No." />
+
+                <!-- Row 2 -->
+                <ComboBox fx:id="comboQueryType" layoutX="25.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Query Type" />
+                <ComboBox fx:id="comboVehicleCondition" layoutX="240.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Vehicle Condition" />
+                <DatePicker fx:id="datePickerQuery" layoutX="455.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Query Date" />
+                <ComboBox fx:id="comboQueryStatus" layoutX="670.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Query Status" />
+
+                <!-- Row 3: Notes + Buttons -->
+                <TextArea fx:id="txtQueryNotes" layoutX="25.0" layoutY="155.0" prefHeight="80.0" prefWidth="630.0" promptText="Enter customer query or vehicle condition notes here..." />
+
+                <Button layoutX="670.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleAddQuery" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #50C878;" text="Add Query" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+                <Button layoutX="670.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #888888;" text="Clear Form" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+
+                <!-- Search Bar -->
+                <Label layoutX="25.0" layoutY="255.0" text="Search Records" textFill="#50c878">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="160.0" layoutY="251.0" prefHeight="30.0" prefWidth="250.0" promptText="Search by Owner Name or Reg No..." />
+                <Button layoutX="420.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #50C878;" text="Search" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+                <Button layoutX="510.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleDeleteQuery" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+
+                <!-- Table Section -->
+                <TableView fx:id="customerTable" layoutX="25.0" layoutY="290.0" prefHeight="315.0" prefWidth="1055.0">
+                    <columns>
+                        <TableColumn fx:id="colOwnerName" prefWidth="150.0" text="Owner Name" />
+                        <TableColumn fx:id="colContact" prefWidth="120.0" text="Contact" />
+                        <TableColumn fx:id="colEmail" prefWidth="180.0" text="Email" />
+                        <TableColumn fx:id="colRegNo" prefWidth="120.0" text="Reg Number" />
+                        <TableColumn fx:id="colCondition" prefWidth="130.0" text="Vehicle Condition" />
+                        <TableColumn fx:id="colQueryType" prefWidth="120.0" text="Query Type" />
+                        <TableColumn fx:id="colDate" prefWidth="110.0" text="Date" />
+                        <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+                        <TableColumn fx:id="colNotes" prefWidth="120.0" text="Notes" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

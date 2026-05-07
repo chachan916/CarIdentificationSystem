@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1038.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.SignUp">
+    <children>
+        <ImageView fitHeight="719.0" fitWidth="512.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/2.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="logo" fitHeight="169.0" fitWidth="148.0" layoutX="695.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../img/3.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="txtEmail" layoutX="593.0" layoutY="304.0" prefHeight="50.0" prefWidth="351.0" promptText="Enter email address">
+            <effect>
+                <DropShadow spread="0.25">
+                    <color>
+                        <Color red="0.4313725531101227" green="0.7254902124404907" blue="0.3764705955982208" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </TextField>
+        <PasswordField fx:id="txtPassword" layoutX="593.0" layoutY="367.0" prefHeight="50.0" prefWidth="351.0" promptText="Enter password">
+            <effect>
+                <DropShadow spread="0.25">
+                    <color>
+                        <Color red="0.4313725531101227" green="0.7254902124404907" blue="0.3764705955982208" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </PasswordField>
+        <Label layoutX="705.0" layoutY="142.0" text="Sign Up">
+            <font>
+                <Font name="System Bold" size="34.0" />
+            </font>
+        </Label>
+        <Label layoutX="663.0" layoutY="666.0" text="Already have an account?" />
+        <Button fx:id="loginButton" layoutX="799.0" layoutY="662.0" mnemonicParsing="false" onAction="#handleBackToLogin" style="-fx-background-color: white;" text="Login here" textFill="#50c878" />
+      <TextField fx:id="txtFullName" layoutX="593.0" layoutY="242.0" prefHeight="50.0" prefWidth="351.0" promptText="Enter your name">
+         <effect>
+            <DropShadow spread="0.25">
+               <color>
+                  <Color red="0.4313725531101227" green="0.7254902124404907" blue="0.3764705955982208" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <PasswordField fx:id="txtConfirmPassword" layoutX="593.0" layoutY="434.0" prefHeight="50.0" prefWidth="351.0" promptText="Confirm password">
+         <effect>
+            <DropShadow spread="0.25">
+               <color>
+                  <Color red="0.4313725531101227" green="0.7254902124404907" blue="0.3764705955982208" />
+               </color>
+            </DropShadow>
+         </effect>
+      </PasswordField>
+      <RadioButton fx:id="rbCustomer" layoutX="593.0" layoutY="515.0" mnemonicParsing="false" text="Customer">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.0760233923792839" green="0.6842105388641357" blue="0.2787524461746216" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </RadioButton>
+      <RadioButton fx:id="rbInsurance" layoutX="690.0" layoutY="516.0" mnemonicParsing="false" text="Insurance">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.0760233923792839" green="0.6842105388641357" blue="0.2787524461746216" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </RadioButton>
+      <RadioButton fx:id="rbPolice" layoutX="787.0" layoutY="516.0" mnemonicParsing="false" text="Police">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.0760233923792839" green="0.6842105388641357" blue="0.2787524461746216" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </RadioButton>
+      <RadioButton fx:id="rbWorkshop" layoutX="869.0" layoutY="516.0" mnemonicParsing="false" text="Workshop">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.0760233923792839" green="0.6842105388641357" blue="0.2787524461746216" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </RadioButton>
+      <TextField fx:id="txtUserId" alignment="CENTER" layoutX="592.0" layoutY="549.0" prefHeight="38.0" prefWidth="157.0" promptText="Enter user Id">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="751.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleGetuserid" prefHeight="39.0" prefWidth="195.0" style="-fx-background-color: #50C878;" text="Get User Id" textFill="#fff3f3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="confirmButton" layoutX="594.0" layoutY="605.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="52.0" prefWidth="351.0" style="-fx-background-color: #50C878; -fx-background-radius: 10;" text="Confirm" textFill="#fff3f3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.08627451211214066" green="1.0" blue="0.239215686917305" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #cce7c9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.UserInsurance">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="7.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+
+                <ImageView fitHeight="90.0" fitWidth="80.0" layoutX="15.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../../../../img/U1.png" /></image>
+                </ImageView>
+                <Label fx:id="txtUser" layoutX="96.0" layoutY="36.0" textFill="WHITE">
+                    <font><Font name="System Bold" size="19.0" /></font>
+                </Label>
+                <Label layoutX="97.0" layoutY="59.0" text="Vehicle Insurance " textFill="WHITE">
+                    <font><Font size="17.0" /></font>
+                </Label>
+
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+            </children>
+        </Pane>
+
+        <!-- HEADER PANE -->
+        <Pane layoutX="249.0" layoutY="18.0" opacity="0.75" prefHeight="58.0" prefWidth="1105.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+            <children>
+                <Label layoutX="14.0" layoutY="6.0" text="Welcome!" textFill="WHITE">
+                    <font><Font name="Arial Bold" size="35.0" /></font>
+                </Label>
+            <Label fx:id="txtUser1" layoutX="177.0" layoutY="6.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <Pane layoutX="249.0" layoutY="85.0" prefHeight="618.0" prefWidth="1106.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <!-- Form Section -->
+                <Label layoutX="10.0" layoutY="20.0" text="Add Vehicle Insurance Policy" textFill="#50c878">
+                    <font><Font name="System Bold" size="18.0" /></font>
+                </Label>
+
+                <!-- Row 1 -->
+                <TextField fx:id="txtRegNo" layoutX="10.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Vehicle Registration No." />
+                <TextField fx:id="txtOwnerName" layoutX="225.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Owner Name" />
+                <TextField fx:id="txtPolicyNumber" layoutX="440.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Policy Number" />
+                <TextField fx:id="txtInsurerName" layoutX="655.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Insurance Provider" />
+
+                <!-- Row 2 -->
+                <ComboBox fx:id="comboCoverType" layoutX="10.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Cover Type" />
+                <DatePicker fx:id="datePickerStart" layoutX="225.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Policy Start Date" />
+                <DatePicker fx:id="datePickerExpiry" layoutX="440.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Policy Expiry Date" />
+                <TextField fx:id="txtPremiumAmount" layoutX="655.0" layoutY="105.0" prefHeight="34.0" prefWidth="200.0" promptText="Premium Amount (M)" />
+
+                <!-- Row 3: Notes + Buttons -->
+                <TextArea fx:id="txtPolicyNotes" layoutX="10.0" layoutY="155.0" prefHeight="80.0" prefWidth="630.0" promptText="Enter additional insurance policy details or remarks here..." />
+
+                <Button layoutX="655.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleAddPolicy" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #50C878;" text="Add Policy" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+                <Button layoutX="655.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #888888;" text="Clear Form" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Button>
+
+                <!-- Search Bar -->
+                <Label layoutX="10.0" layoutY="255.0" text="Search Records" textFill="#50c878">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="145.0" layoutY="251.0" prefHeight="30.0" prefWidth="250.0" promptText="Search by Reg No. or Policy No..." />
+                <Button layoutX="405.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #50C878;" text="Search" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+                <Button layoutX="495.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleDeletePolicy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+
+                <!-- Table Section -->
+                <TableView fx:id="insuranceTable" layoutX="7.0" layoutY="290.0" prefHeight="295.0" prefWidth="1095.0">
+                    <columns>
+                        <TableColumn fx:id="colRegNo" prefWidth="108.0" text="Reg Number" />
+                        <TableColumn fx:id="colOwnerName" prefWidth="108.0" text="Owner Name" />
+                        <TableColumn fx:id="colPolicyNumber" prefWidth="114.0" text="Policy Number" />
+                        <TableColumn fx:id="colInsurer" prefWidth="120.0" text="Insurance Provider" />
+                        <TableColumn fx:id="colCoverType" prefWidth="131.0" text="Cover Type" />
+                        <TableColumn fx:id="colStartDate" prefWidth="97.0" text="Start Date" />
+                        <TableColumn fx:id="colExpiryDate" prefWidth="108.0" text="Expiry Date" />
+                        <TableColumn fx:id="colPremium" prefWidth="92.0" text="Premium (M)" />
+                        <TableColumn fx:id="colStatus" prefWidth="108.0" text="Status" />
+                  <TableColumn fx:id="colMakeModel" prefWidth="108.0" text="Make/Model" />
+                    </columns>
+                </TableView>
+            <TextField fx:id="txtMakeModel" layoutX="869.0" layoutY="55.0" prefHeight="34.0" prefWidth="200.0" promptText="Make/Model" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

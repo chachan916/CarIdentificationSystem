@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #f4f7f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.AdminInsurance">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="8.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+                <Line endX="117.0" layoutX="108.0" layoutY="121.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="13.0" layoutY="146.0" text="Main" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Button layoutX="6.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="        Dashboard" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="-4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../../../../img/6.png" /></image>
+                </ImageView>
+                <Label layoutX="77.0" layoutY="33.0" text="VIS Admin" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Label layoutX="78.0" layoutY="59.0" text="Vehicle ID System" textFill="WHITE">
+                    <font><Font size="17.0" /></font>
+                </Label>
+                <Button layoutX="6.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleVehicles" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="    Vehicles" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <Button layoutX="8.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleUsers" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Users" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/9.png" /></image></ImageView>
+                <ImageView fitHeight="34.0" fitWidth="55.0" layoutX="11.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/8.png" /></image></ImageView>
+                <ImageView fitHeight="47.0" fitWidth="104.0" layoutX="5.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/7.png" /></image></ImageView>
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+                <Label layoutX="13.0" layoutY="345.0" text="Modules" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Button layoutX="3.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleWorkshop" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="       Workshop" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A1.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="440.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878; -fx-border-color: white; -fx-border-radius: 5;" text="      Insurance" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="12.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A2.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="479.0" mnemonicParsing="false" onAction="#handlePolice" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Police" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="16.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A3.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Customer" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/B.png" /></image></ImageView>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <VBox layoutX="255.0" layoutY="14.0" prefHeight="690.0" prefWidth="1090.0" spacing="15.0">
+            <children>
+                <!-- TOP STAT CARDS -->
+                <HBox prefHeight="100.0" prefWidth="1090.0" spacing="20.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="255.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Total Policies" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="totalPolicies" text="63" textFill="#50C878"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="255.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Active" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="totalActive" text="47" textFill="#2d9cdb"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="255.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Expiring Soon" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="expiringSoon" text="9" textFill="#f2c94c"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="255.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Expired" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="totalExpired" text="7" textFill="#eb5757"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- TABBED VIEW -->
+                <TabPane prefHeight="330.0" prefWidth="1090.0" style="-fx-background-color: white; -fx-background-radius: 12;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Insurance Policies">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <padding><Insets bottom="10.0" left="10.0" right="10.0" top="10.0" /></padding>
+                                    <children>
+                                        <!-- TABLE ID FIXED TO tblAllPolicies -->
+                                        <TableView fx:id="tblAllPolicies" prefHeight="240.0" prefWidth="1070.0">
+                                            <columns>
+                                                <!-- COLUMN IDs FIXED -->
+                                                <TableColumn fx:id="colPolNum" prefWidth="90" text="Policy No." />
+                                                <TableColumn fx:id="colPolReg" prefWidth="90" text="Reg. No." />
+                                                <TableColumn fx:id="colPolOwner" prefWidth="120" text="Owner" />
+                                                <TableColumn fx:id="colPolMakeModel" prefWidth="120" text="Make/Model" /> <!-- No ID needed if not bound in AdminInsurance -->
+                                                <TableColumn fx:id="colPolType" prefWidth="110" text="Type" />
+                                                <TableColumn fx:id="colPolInsurer" prefWidth="100" text="Provider" />
+                                                <TableColumn fx:id="colPolStart" prefWidth="90.0" text="Start Date" />
+                                                <TableColumn fx:id="colPolExpiry" prefWidth="140.0" text="Expiry Date" />
+                                                <TableColumn fx:id="colPolPremium" prefWidth="98.0" text="Premium (M)" />
+                                                <TableColumn fx:id="colPolStatus" prefWidth="111.0" text="Status" />
+                                            </columns>
+                                        </TableView>
+                                        <HBox alignment="CENTER_RIGHT">
+                                            <children>
+                                                <Pagination fx:id="pagination" maxPageIndicatorCount="5" pageCount="4" prefHeight="45.0" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+
+                <!-- BOTTOM ROW PANELS -->
+                <HBox prefHeight="165.0" prefWidth="1090.0" spacing="15.0">
+                    <children>
+                        <VBox prefHeight="165.0" prefWidth="1089.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 15;">
+                            <children>
+                                <Label text="Coverage Type Breakdown"><font><Font name="System Bold" size="16.0" /></font></Label>
+                                <VBox spacing="10.0" style="-fx-padding: 10 0 0 0;">
+                                    <children>
+                                        <HBox spacing="10"><Label prefWidth="120" text="Comprehensive" /><ProgressBar fx:id="progressComp" prefWidth="320" style="-fx-accent: #50C878;" /><Label fx:id="displayComprehensive" /></HBox>
+                                        <HBox spacing="10"><Label prefWidth="120" text="Third Party" /><ProgressBar fx:id="progressThirdParty" prefWidth="320" style="-fx-accent: #2d9cdb;" /><Label fx:id="displayThirdParty" /></HBox>
+                                        <HBox spacing="10"><Label prefWidth="120" text="Fire &amp; Theft" /><ProgressBar fx:id="progressFireTheft" prefWidth="320" style="-fx-accent: #f2c94c;" /><Label fx:id="displayFireTheft" /></HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #cce7c9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.Admin">
+   <children>
+      <!-- SIDEBAR PANE -->
+      <Pane layoutX="8.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+         <children>
+            <Line endX="117.0" layoutX="108.0" layoutY="121.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="13.0" layoutY="146.0" text="Main" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+
+            <!-- Dashboard Button (Active Page) -->
+            <Button layoutX="6.0" layoutY="199.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878; -fx-border-color: white; -fx-border-radius: 5;" text="        Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="-4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/6.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="77.0" layoutY="33.0" text="VIS Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="59.0" text="Vehicle ID System" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+
+            <!-- Vehicles Button -->
+            <Button layoutX="6.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleVehicles" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="    Vehicles" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <!-- Users Button -->
+            <Button layoutX="8.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleUsers" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Users" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <!-- Icons -->
+            <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/9.png" /></image></ImageView>
+            <ImageView fitHeight="34.0" fitWidth="55.0" layoutX="11.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/8.png" /></image></ImageView>
+            <ImageView fitHeight="47.0" fitWidth="104.0" layoutX="5.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/7.png" /></image></ImageView>
+
+            <!-- Logout Button -->
+            <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+            <Button layoutX="3.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleWorkshop" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="       Workshop" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/A1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="345.0" text="Modules" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="1.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleInsurance" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Insurance" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="12.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/A2.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="1.0" layoutY="479.0" mnemonicParsing="false" onAction="#handlePolice" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Police" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="16.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/A3.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="1.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/B.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+      <!-- HEADER PANE -->
+      <Pane layoutX="249.0" layoutY="14.0" opacity="0.75" prefHeight="58.0" prefWidth="1105.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" text="Dashboard Overview" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="942.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleAddVehicle" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: #50C878; -fx-border-color: white; -fx-border-radius: 5;" text="   Add Vehicle" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="34.0" fitWidth="47.0" layoutX="941.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/11.png" /></image></ImageView>
+         </children>
+      </Pane>
+
+      <!-- MAIN TABLE -->
+      <TableView fx:id="mainVehicleTable" layoutX="249.0" layoutY="235.0" opacity="0.67" prefHeight="253.0" prefWidth="546.0" style="-fx-background-color: #50C878;">
+         <columns>
+            <TableColumn fx:id="colRegNo" prefWidth="100.0" text="REG N0." />
+            <TableColumn fx:id="colModel" prefWidth="130.0" text="Make/Model" />
+            <TableColumn fx:id="colOwner" prefWidth="116.0" text="Owner" />
+            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+            <TableColumn fx:id="colModule" prefWidth="100.0" text="Module" />
+         </columns>
+      </TableView>
+
+      <PieChart fx:id="moduleUsage" layoutX="801.0" layoutY="499.0" prefHeight="212.0" prefWidth="552.0" />
+
+      <BarChart fx:id="vehicleBarChat" layoutX="231.0" layoutY="500.0" opacity="0.94" prefHeight="212.0" prefWidth="576.0">
+         <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+         <yAxis><NumberAxis side="LEFT" /></yAxis>
+      </BarChart>
+
+      <!-- STAT CARDS -->
+      <Pane layoutX="249.0" layoutY="81.0" opacity="0.75" prefHeight="146.0" prefWidth="359.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="16.0" layoutY="5.0" text="Total Vehicles" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+            <Label fx:id="lblTotalVehicles" layoutX="218.0" layoutY="44.0" prefHeight="85.0" prefWidth="120.0" text="0" textFill="WHITE"><font><Font name="System Bold" size="64.0" /></font></Label>
+            <ImageView fitHeight="117.0" fitWidth="134.0" layoutX="-11.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A.png" /></image></ImageView>
+         </children>
+      </Pane>
+
+      <Pane layoutX="622.0" layoutY="81.0" opacity="0.75" prefHeight="146.0" prefWidth="359.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="10.0" text="Active Users" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+            <Label fx:id="lblActiveUsers" layoutX="226.0" layoutY="45.0" prefHeight="85.0" prefWidth="120.0" text="0" textFill="WHITE"><font><Font name="System Bold" size="64.0" /></font></Label>
+            <ImageView fitHeight="93.0" fitWidth="75.0" layoutX="8.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/D.png" /></image></ImageView>
+         </children>
+      </Pane>
+
+      <Pane layoutX="996.0" layoutY="81.0" opacity="0.75" prefHeight="146.0" prefWidth="359.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+         <children>
+            <Label layoutX="11.0" layoutY="-2.0" text="Blacklisted alert" textFill="WHITE"><font><Font name="System Bold" size="23.0" /></font></Label>
+            <Label fx:id="lblBlacklisted" layoutX="224.0" layoutY="46.0" prefHeight="85.0" prefWidth="120.0" text="0" textFill="WHITE"><font><Font name="System Bold" size="64.0" /></font></Label>
+            <ImageView fitHeight="67.0" fitWidth="55.0" layoutX="11.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/C.png" /></image></ImageView>
+         </children>
+      </Pane>
+
+      <!-- LINE CHART WITH FIX APPLIED -->
+      <LineChart fx:id="userAccountChart" layoutX="792.0" layoutY="228.0" prefHeight="285.0" prefWidth="576.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

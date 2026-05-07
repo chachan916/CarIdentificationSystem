@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #cce7c9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.UserPolice">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="8.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+            <Circle layoutX="115.0" layoutY="98.0" radius="84.0" stroke="BLACK" strokeType="INSIDE" />
+
+                <ImageView fitHeight="155.0" fitWidth="210.0" layoutX="12.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../../../../img/A3.png" /></image>
+                </ImageView>
+                <Label fx:id="txtUser" layoutX="133.0" layoutY="201.0" text="OFFICER" textFill="WHITE">
+                    <font><Font name="System Bold" size="22.0" /></font>
+                </Label>
+
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+            <Line endX="112.0" layoutX="114.0" layoutY="245.0" startX="-106.0" />
+            <Label layoutX="14.0" layoutY="201.0" text="WELCOME" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+
+        <!-- HEADER PANE -->
+        <Pane layoutX="249.0" layoutY="13.0" opacity="0.75" prefHeight="58.0" prefWidth="1105.0" style="-fx-background-color: #50C878; -fx-background-radius: 5;">
+            <children>
+                <Label layoutX="14.0" layoutY="6.0" text="Police Vehicle Management " textFill="WHITE">
+                    <font><Font name="Arial Bold" size="35.0" /></font>
+                </Label>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <Pane layoutX="249.0" layoutY="81.0" prefHeight="624.0" prefWidth="1105.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <children>
+                <!-- Form Section -->
+                <Label layoutX="25.0" layoutY="20.0" text="Vehicle Verification &amp; Incident Logging" textFill="#50c878">
+                    <font><Font name="System Bold" size="18.0" /></font>
+                </Label>
+
+                <!-- Row 1 -->
+                <TextField fx:id="txtRegNo" layoutX="25.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Vehicle Registration No." />
+                <TextField fx:id="txtOwnerName" layoutX="909.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Owner Name" />
+                <TextField fx:id="txtOfficerBadge" layoutX="26.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Officer Badge No." />
+                <TextField fx:id="txtOfficerName" layoutX="203.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Officer Name" />
+
+                <!-- Row 2 -->
+                <ComboBox fx:id="comboIncidentType" layoutX="380.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Incident Type" />
+                <ComboBox fx:id="comboVehicleStatus" layoutX="557.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Vehicle Status" />
+                <DatePicker fx:id="datePickerIncident" layoutX="733.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Incident Date" />
+                <TextField fx:id="txtLocation" layoutX="909.0" layoutY="105.0" prefHeight="34.0" prefWidth="168.0" promptText="Incident Location" />
+
+                <Button layoutX="30.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleLogIncident" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #50C878;" text="Log Incident" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+               <effect>
+                  <DropShadow spread="0.49">
+                     <color>
+                        <Color red="0.032407406717538834" green="1.0" blue="0.22592592239379883" />
+                     </color>
+                  </DropShadow>
+               </effect>
+                </Button>
+                <Button layoutX="190.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #888888;" text="Clear Form" textFill="WHITE">
+                    <font><Font name="System Bold" size="14.0" /></font>
+               <effect>
+                  <DropShadow spread="0.36">
+                     <color>
+                        <Color red="0.02631578966975212" green="0.02631578966975212" blue="0.02631578966975212" />
+                     </color>
+                  </DropShadow>
+               </effect>
+                </Button>
+
+                <!-- Search Bar -->
+                <Label layoutX="25.0" layoutY="255.0" text="Search Records" textFill="#50c878">
+                    <font><Font name="System Bold" size="14.0" /></font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="160.0" layoutY="251.0" prefHeight="30.0" prefWidth="250.0" promptText="Search by Reg No. or Officer Badge..." />
+                <Button layoutX="420.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #50C878;" text="Search" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+                <Button layoutX="510.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleDeleteRecord" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+
+                <!-- Table Section -->
+                <TableView fx:id="policeTable" layoutX="27.0" layoutY="290.0" prefHeight="314.0" prefWidth="1051.0">
+                    <columns>
+                        <TableColumn fx:id="colRegNo" prefWidth="77.0" text="Reg Number" />
+                        <TableColumn fx:id="colOwnerName" prefWidth="89.0" text="Owner Name" />
+                        <TableColumn fx:id="colMake" prefWidth="75.0" text="Make" />
+                        <TableColumn fx:id="colModel" prefWidth="84.0" text="Model" />
+                        <TableColumn fx:id="colYear" prefWidth="87.0" text="Year" />
+                        <TableColumn fx:id="colColour" prefWidth="94.0" text="Colour" />
+                        <TableColumn fx:id="colBadgeNo" prefWidth="103.0" text="Badge No." />
+                        <TableColumn fx:id="colOfficerName" prefWidth="82.0" text="Officer Name" />
+                        <TableColumn fx:id="colIncidentType" prefWidth="87.0" text="Incident Type" />
+                  <TableColumn fx:id="colVehicleStatus" prefWidth="88.0" text="Vehicle Status" />
+                  <TableColumn fx:id="colDate" prefWidth="88.0" text="Date" />
+                  <TableColumn fx:id="colNotes" prefWidth="96.0" text="Location" />
+                    </columns>
+                </TableView>
+            <TextField fx:id="txtMake" layoutX="202.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Make" />
+            <TextField fx:id="txtModel" layoutX="379.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Model" />
+            <TextField fx:id="txtYear" layoutX="557.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Year" />
+            <TextField fx:id="txtColour" layoutX="734.0" layoutY="55.0" prefHeight="34.0" prefWidth="168.0" promptText="Colour" />
+            <Line endX="941.0" layoutX="131.0" layoutY="220.0" startX="-100.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

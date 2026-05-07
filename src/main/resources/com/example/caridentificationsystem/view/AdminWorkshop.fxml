@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="719.0" prefWidth="1366.0" style="-fx-background-color: #f4f7f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.caridentificationsystem.controller.AdminWorkshop">
+    <children>
+        <!-- SIDEBAR PANE -->
+        <Pane layoutX="8.0" layoutY="14.0" prefHeight="690.0" prefWidth="234.0" style="-fx-background-color: #50C878; -fx-background-radius: 16;">
+            <children>
+                <Line endX="117.0" layoutX="108.0" layoutY="121.0" startX="-100.0" stroke="WHITE" />
+                <Label layoutX="13.0" layoutY="146.0" text="Main" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Button layoutX="6.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="        Dashboard" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="-4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../../../../img/6.png" /></image>
+                </ImageView>
+                <Label layoutX="77.0" layoutY="33.0" text="VIS Admin" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Label layoutX="78.0" layoutY="59.0" text="Vehicle ID System" textFill="WHITE">
+                    <font><Font size="17.0" /></font>
+                </Label>
+                <Button layoutX="6.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleVehicles" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="    Vehicles" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <Button layoutX="8.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleUsers" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Users" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/9.png" /></image></ImageView>
+                <ImageView fitHeight="34.0" fitWidth="55.0" layoutX="11.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/8.png" /></image></ImageView>
+                <ImageView fitHeight="47.0" fitWidth="104.0" layoutX="5.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/7.png" /></image></ImageView>
+                <Button layoutX="5.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Log Out" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="38.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/10.png" /></image></ImageView>
+                <Button layoutX="3.0" layoutY="398.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878; -fx-border-color: white; -fx-border-radius: 5;" text="       Workshop" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A1.png" /></image></ImageView>
+                <Label layoutX="13.0" layoutY="345.0" text="Modules" textFill="WHITE">
+                    <font><Font name="System Bold" size="23.0" /></font>
+                </Label>
+                <Button layoutX="1.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleInsurance" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Insurance" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="58.0" fitWidth="66.0" layoutX="12.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A2.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="479.0" mnemonicParsing="false" onAction="#handlePolice" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="Police" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="16.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/A3.png" /></image></ImageView>
+                <Button layoutX="1.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="34.0" prefWidth="218.0" style="-fx-background-color: #50C878;" text="      Customer" textFill="WHITE">
+                    <font><Font name="System Bold" size="16.0" /></font>
+                </Button>
+                <ImageView fitHeight="26.0" fitWidth="55.0" layoutX="20.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@../../../../img/B.png" /></image></ImageView>
+            </children>
+        </Pane>
+
+        <!-- MAIN CONTENT AREA -->
+        <VBox layoutX="255.0" layoutY="14.0" prefHeight="690.0" prefWidth="1090.0" spacing="15.0">
+            <children>
+                <!-- TOP STAT CARDS -->
+                <HBox prefHeight="100.0" prefWidth="1090.0" spacing="20.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Total Vehicles" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblTotalVehicles" text="0" textFill="#50C878"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Service Records" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblServiceRecords" text="0" textFill="#2d9cdb"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Total Service Cost" textFill="#777777"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="lblTotalServiceCost" text="M 0.00" textFill="#27ae60"><font><Font name="System Bold" size="32.0" /></font></Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <!-- TABBED VIEW & TABLE -->
+                <TabPane prefHeight="380.0" prefWidth="1090.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Vehicle Registrations">
+                            <content>
+                                <TableView fx:id="vehicleTable" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="colVehId" prefWidth="100" text="Vehicle ID" />
+                                        <TableColumn fx:id="colVehMake" prefWidth="150" text="Make" />
+                                        <TableColumn fx:id="colVehModel" prefWidth="150" text="Model" />
+                                        <TableColumn fx:id="colVehYear" prefWidth="100" text="Year" />
+                                        <TableColumn fx:id="colVehReg" prefWidth="150" text="Reg. Number" />
+                                        <TableColumn fx:id="colVehOwner" prefWidth="150" text="Owner ID" />
+                                    </columns>
+                                </TableView>
+                            </content>
+                        </Tab>
+                        <Tab text="Service Records">
+                            <content>
+                                <VBox spacing="10.0" style="-fx-padding: 15;">
+                                    <children>
+                                        <TableView fx:id="tblServiceRecords" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="colSrvId" prefWidth="100.0" text="Service ID" />
+                                                <TableColumn fx:id="colSrvVehId" prefWidth="100.0" text="Vehicle ID" />
+                                                <TableColumn fx:id="colSrvDate" prefWidth="120.0" text="Service Date" />
+                                                <TableColumn fx:id="colSrvType" prefWidth="150.0" text="Service Type" />
+                                                <TableColumn fx:id="colSrvDesc" prefWidth="420.0" text="Description" />
+                                                <TableColumn fx:id="colSrvCost" prefWidth="169.0" text="Cost (M)" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+
+                <!-- BOTTOM ROW PANEL -->
+                <HBox prefHeight="180.0" prefWidth="1090.0" spacing="15.0">
+                    <children>
+                        <VBox prefHeight="180.0" prefWidth="1008.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 15;">
+                            <children>
+                                <Label text="Service Type Breakdown"><font><Font name="System Bold" size="16.0" /></font></Label>
+                                <VBox spacing="8.0" style="-fx-padding: 10 0 0 0;">
+                                    <children>
+                                        <HBox spacing="10"><Label prefWidth="100" text="Oil Change" /><ProgressBar prefHeight="18.0" prefWidth="531.0" progress="0.8" style="-fx-accent: #50C878;" /></HBox>
+                                        <HBox spacing="10"><Label prefWidth="100" text="Full Service" /><ProgressBar prefHeight="18.0" prefWidth="531.0" progress="0.6" style="-fx-accent: #2d9cdb;" /></HBox>
+                                        <HBox spacing="10"><Label prefWidth="100" text="Brake Service" /><ProgressBar prefHeight="18.0" prefWidth="530.0" progress="0.4" style="-fx-accent: #eb5757;" /></HBox>
+                                        <HBox spacing="10"><Label prefWidth="100" text="Repair" /><ProgressBar prefHeight="18.0" prefWidth="529.0" progress="0.3" style="-fx-accent: #f2c94c;" /></HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
