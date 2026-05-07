@@ -1,5 +1,7 @@
+# IntelliJ 
 .idea/ 
 *.iml 
 out/ 
 target/ 
-*.class
+build/ 
+.gradle/ 
